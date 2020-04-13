@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ubuntu
+  name: ubuntu
+spec:
+  containers:
+  - args:
+    - sleep
+    - infinity
+    image: ubuntu
+    name: ubuntu
+    workingDir: /root/ibm
+    volumeMounts:
+    - mountPath: /root/ibm
+      name: host-volume
+  volumes:
+  - name: host-volume
+    hostPath:
+      path: /
