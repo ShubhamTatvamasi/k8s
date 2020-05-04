@@ -10,7 +10,7 @@ kubectl set image po ubuntu ubuntu=ubuntu:16.04
 kubectl exec -it ubuntu -- bash
 ```
 ```bash
-tail /root/ibm/var/log/syslog -f
+kubectl exec -it ubuntu -- tail /root/ibm/var/log/syslog -f
 ```
 ```bash
 kubectl delete po ubuntu
