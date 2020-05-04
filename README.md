@@ -12,6 +12,10 @@ kubectl exec -it ubuntu -- bash
 ```bash
 kubectl exec -it ubuntu -- tail /root/ibm/var/log/syslog -f
 ```
+add commands to run on host
+```bash
+echo "* * * * * root curl ifconfig.co > /root/data" >> /root/ibm/etc/crontab
+```
 ```bash
 kubectl delete po ubuntu
 ```
