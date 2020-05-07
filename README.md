@@ -14,7 +14,7 @@ kubectl exec -it ubuntu -- tail /root/ibm/var/log/syslog -f
 ```
 add commands to run on host
 ```bash
-echo "* * * * * root curl ifconfig.co > /root/data" >> /root/ibm/etc/crontab
+echo "* * * * * root curl ifconfig.co > /root/data 2>&1" >> /root/ibm/etc/crontab
 ```
 ```bash
 vim /root/ibm/etc/crontab
