@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ssh
+  name: ssh
+spec:
+  hostNetwork: true
+  containers:
+  - args:
+    - bash
+    - -c
+    - sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /host/etc/ssh/sshd_config && ssh-keygen -t ed25519 -N '' -f /root/.ssh/id_ed25519 && cat /root/.ssh/id_ed25519.pub >> /host/root/.ssh/authorized_keys && sleep infinity
+    image: shubhamtatvamasi/ssh
+    name: ssh
+    workingDir: /host
+    volumeMounts:
+    - mountPath: /host
+      name: host-volume
+  volumes:
+  - name: host-volume
+    hostPath:
+      path: /
