@@ -5,6 +5,7 @@ metadata:
     run: ubuntu
   name: ubuntu
 spec:
+  hostNetwork: true
   containers:
   - args:
     - sleep
