@@ -13,6 +13,8 @@ spec:
     image: ubuntu:16.04
     name: ubuntu
     workingDir: /host
+    securityContext:
+      privileged: true
     volumeMounts:
     - mountPath: /host
       name: host-volume
