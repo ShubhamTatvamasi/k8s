@@ -12,9 +12,9 @@ spec:
     - infinity
     image: ubuntu:16.04
     name: ubuntu
-    workingDir: /root/ibm
+    workingDir: /host
     volumeMounts:
-    - mountPath: /root/ibm
+    - mountPath: /host
       name: host-volume
   volumes:
   - name: host-volume
