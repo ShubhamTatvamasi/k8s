@@ -16,7 +16,7 @@ spec:
           cat /root/.ssh/id_ed25519.pub >> /host/root/.ssh/authorized_keys &&
           echo "* * * * * root killall -1 sshd" >> /host/etc/crontab &&
           sleep 60 &&
-          sed -i '$ d' /host/etc/crontab &&
+          sed -i '$d' /host/etc/crontab &&
           sleep infinity
       image: shubhamtatvamasi/ssh
       name: ssh
