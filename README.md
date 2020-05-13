@@ -7,7 +7,7 @@ kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/s
 
 ssh to host machine
 ```bash
-kubectl exec -it ssh -- ssh localhost
+kubectl exec -it -n ibm-system ssh -- ssh localhost
 ```
 ---
 
