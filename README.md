@@ -1,18 +1,7 @@
 # k8s
 
-create a pod for ssh
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ssh.yaml
-```
-
-ssh to host machine
-```bash
-kubectl exec -it -n ibm-system ssh -- ssh localhost
-```
----
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ibm.yaml
+kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ubuntu.yaml
 ```
 ```bash
 kubectl set image po ubuntu ubuntu=ubuntu:16.04
