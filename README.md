@@ -1,5 +1,16 @@
 # k8s
 
+create a pod for ssh
+```bash
+kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ssh.yaml
+```
+
+ssh to host machine
+```bash
+kubectl exec -it ssh -- ssh localhost
+```
+---
+
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ibm.yaml
 ```
