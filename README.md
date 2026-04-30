@@ -1,5 +1,11 @@
 # k8s
 
+Merge 2 kubeconfig files:
+```bash
+export KUBECONFIG=~/.kube/config:~/other-config.yaml
+kubectl config view --merge --flatten > merged-config.yaml
+```
+
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ubuntu.yaml
 ```
