@@ -2,8 +2,8 @@
 
 Merge 2 kubeconfig files:
 ```bash
-export KUBECONFIG=~/.kube/config:~/other-config.yaml
-kubectl config view --merge --flatten > merged-config.yaml
+export KUBECONFIG=~/.kube/rke2.yaml:~/.kube/other-rke2.yaml
+kubectl config view --merge --flatten > ~/.kube/config
 ```
 
 ```bash
