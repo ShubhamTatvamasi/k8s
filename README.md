@@ -1,10 +1,23 @@
 # k8s
 
-Merge 2 kubeconfig files:
+### Merge Kubeconfig
+
+Add new clusters to kubeconfig:
+```bash
+mv ~/.kube/config ~/.kube/config.bak
+
+export KUBECONFIG=~/.kube/config.bak:~/Downloads/shubham-kubeconfig.yaml
+kubectl config view --merge --flatten > ~/.kube/config
+```
+
+Create fresh kubeconfig:
 ```bash
 export KUBECONFIG=~/.kube/rke2.yaml:~/.kube/other-rke2.yaml
 kubectl config view --merge --flatten > ~/.kube/config
 ```
+
+---
+
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/k8s/master/ubuntu.yaml
