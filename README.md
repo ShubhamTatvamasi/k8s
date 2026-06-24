@@ -6,7 +6,7 @@ Add new clusters to kubeconfig:
 ```bash
 mv ~/.kube/config ~/.kube/config.bak
 
-export KUBECONFIG=~/.kube/config.bak:~/Downloads/shubham-kubeconfig.yaml
+export KUBECONFIG=~/.kube/config.bak:~/Downloads/statvamasi-kubeconfig.yaml
 kubectl config view --merge --flatten > ~/.kube/config
 ```
 
