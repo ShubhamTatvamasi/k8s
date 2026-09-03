@@ -2,6 +2,11 @@
 
 ### Merge Kubeconfig
 
+Change Context:
+```bash
+sed -i '' 's/default/portainer-rke2-rook-ceph/g' rke2.yaml
+```
+
 Add new clusters to kubeconfig:
 ```bash
 mv ~/.kube/config ~/.kube/config.bak
