@@ -4,6 +4,7 @@
 
 Change Context:
 ```bash
+sed -i '' 's/default/portainer-rke2/g' rke2.yaml
 sed -i '' 's/default/portainer-rke2-rook-ceph/g' rke2.yaml
 ```
 
