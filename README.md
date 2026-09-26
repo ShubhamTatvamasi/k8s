@@ -14,6 +14,7 @@ mv ~/.kube/config ~/.kube/config.bak
 
 export KUBECONFIG=~/.kube/config.bak:~/myfiles/firefox/downloads/statvamasi-kubeconfig.yaml
 export KUBECONFIG=~/.kube/config.bak:~/.kube/rke2.yaml
+export KUBECONFIG=~/.kube/eog/statvamasi-kubeconfig.yaml:~/.kube/portainer/rke2.yaml
 
 kubectl config view --merge --flatten > ~/.kube/config
 ```
