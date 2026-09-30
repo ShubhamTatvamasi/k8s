@@ -6,7 +6,8 @@ Change Context:
 ```bash
 sed -i '' 's/default/portainer-rke2/g' rke2.yaml
 sed -i '' 's/default/portainer-rke2-rook-ceph/g' rke2.yaml
-sed -i '' 's/default/portainer-droplet/g' rke2.yaml
+sed -i '' 's/default/amd-droplet/g' rke2.yaml
+sed -i '' 's/default/nvidia-droplet/g' rke2.yaml
 ```
 
 Add new clusters to kubeconfig:
