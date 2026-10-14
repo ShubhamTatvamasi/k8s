@@ -9,6 +9,7 @@ sed -i '' 's/default/portainer-rke2-rook-ceph/g' rke2.yaml
 sed -i '' 's/default/amd-droplet/g' rke2.yaml
 sed -i '' 's/default/nvidia-droplet/g' rke2.yaml
 sed -i '' 's/default/nvidia-dynamo/g' rke2.yaml
+sed -i '' 's/default/droplet/g' rke2.yaml
 ```
 
 Add new clusters to kubeconfig:
