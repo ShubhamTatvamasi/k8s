@@ -21,7 +21,7 @@ export KUBECONFIG=~/.kube/config.bak:~/.kube/rke2.yaml
 export KUBECONFIG=~/.kube/eog/statvamasi-kubeconfig.yaml:~/.kube/portainer/rke2.yaml
 export KUBECONFIG=~/.kube/config.bak:~/.kube/droplet/amd-droplet.yaml:~/.kube/droplet/nvidia-droplet.yaml
 export KUBECONFIG=~/.kube/config.bak:~/.kube/droplet/nvidia-dynamo.yaml
-export KUBECONFIG=~/.kube/eog/statvamasi-kubeconfig.yaml:~/.kube/droplet/droplet.yaml
+export KUBECONFIG=~/.kube/eog/statvamasi-kubeconfig.yaml:~/.kube/portainer/rke2.yaml:~/.kube/droplet/droplet.yaml
 
 kubectl config view --merge --flatten > ~/.kube/config
 ```
